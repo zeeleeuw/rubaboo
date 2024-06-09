@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the Number</title>
+    <title>Math Game for Kids</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>Guess the Number</h1>
-        <p>Guess a number between 1 and 100:</p>
-        <input type="number" id="guessInput" min="1" max="100">
-        <button onclick="checkGuess()">Guess</button>
+        <h1>Math Game</h1>
+        <p id="equation">Equation will appear here</p>
+        <div id="input-container">
+            <input type="number" id="answerInput" readonly>
+        </div>
+        <div id="number-buttons">
+            <button onclick="enterNumber(1)">1</button>
+            <button onclick="enterNumber(2)">2</button>
+            <button onclick="enterNumber(3)">3</button>
+            <button onclick="enterNumber(4)">4</button>
+            <button onclick="enterNumber(5)">5</button>
+            <button onclick="enterNumber(6)">6</button>
+            <button onclick="enterNumber(7)">7</button>
+            <button onclick="enterNumber(8)">8</button>
+            <button onclick="enterNumber(9)">9</button>
+            <button onclick="enterNumber(0)">0</button>
+        </div>
         <p id="message"></p>
-        <button onclick="restartGame()">Restart</button>
+        <button id="startGame" onclick="startGame()">Start Game</button>
     </div>
     <script src="scripts.js"></script>
 </body>
